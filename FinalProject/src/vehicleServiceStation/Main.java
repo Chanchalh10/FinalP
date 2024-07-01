@@ -1,6 +1,8 @@
-package com.sunbeam;
+package vehicleServiceStation;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -226,7 +228,24 @@ public class Main implements Serializable
 	private static final long serialVersionUID = 1L;
 	
 	public static Scanner sc=new Scanner(System.in);
-	
+
+	public static String welcome() {
+		ByteArrayOutputStream outBytes = new ByteArrayOutputStream();
+		PrintStream out = new PrintStream(outBytes);
+		out.printf("Java My Project @ SunBeam Infotech\n\n");
+		out.printf("Vehicle Service Station\n\n");
+		out.printf("This is simplified version of the case study implementation.\n");
+		out.printf("Consider this as base and implement case study of your own.\n");
+		out.printf(
+				"This implementation should help you to understand requirements better. First read the given documentation of case study.\n\n");
+		out.printf("However most of the validations are not implemented. So be careful while trying it.\n");
+		out.printf("Note that all string inputs are considered without white space.\n");
+		out.printf("Given a dummy customer database as sample and is used in this program.\n");
+		out.flush();
+		String text = outBytes.toString();
+		out.close();
+		return text;
+	}
 	
 
 	

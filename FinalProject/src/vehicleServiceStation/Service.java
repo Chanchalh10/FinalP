@@ -1,4 +1,4 @@
-package com.sunbeam;
+package vehicleServiceStation;
 import java.io.Serializable;
 
 abstract public class Service implements Serializable
